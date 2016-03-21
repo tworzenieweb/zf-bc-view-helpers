@@ -48,4 +48,14 @@ class LegacyViewHelperWrapperTest extends PHPUnit_Framework_TestCase
 
         $view->{$name}(1, 2, 3);
     }
+
+    /**
+     * @expectedException \RuntimeException
+     */
+    public function testItShouldFailWhenHelperIsNotCallable()
+    {
+        $notCallableMock = Mockery::mock('\Tworzenieweb\Helper\BCViewHelperInterface');
+        $this->helperWrapper->injectHelper($notCallableMock);
+        $this->helperWrapper->__invoke();
+    }
 }
