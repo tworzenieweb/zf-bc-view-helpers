@@ -38,3 +38,25 @@ class JobleadsHelper extends AbstractBCViewHelper
     }
 }
 ```
+
+```php
+$jobleadsHelper = new JobleadsHelper();
+
+// for ZF1
+$view = new Zend_View();
+$name = $jobleadsHelper->getName();
+$helper = $jobleadsHelper->getBCHelper();
+$view->registerHelper($helper, $name);
+
+$view->{$name}(); // will execute a helper or just $view->jobleads();
+
+// for ZF2
+$renderer = new PhpRenderer();
+$helpers = new HelperPluginManager();
+$helpers->setInvokableClass($name, get_class($jobleadsHelper));
+$renderer->setHelperPluginManager($helpers);
+
+$renderer->{$name}(); // will execute a helper or just $renderer->jobleads();
+```
+
+Of course you can use factory class for instantiating the helper and passing necessary dependancies.
