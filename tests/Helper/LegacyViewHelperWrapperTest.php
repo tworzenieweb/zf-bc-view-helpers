@@ -58,4 +58,16 @@ class LegacyViewHelperWrapperTest extends PHPUnit_Framework_TestCase
         $this->helperWrapper->injectHelper($notCallableMock);
         $this->helperWrapper->__invoke();
     }
+
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testHelperShouldBeCallableByNameOnly()
+    {
+        $name = $this->helperWrapper->getName();
+        $this->helper->shouldReceive('__invoke')->once();
+        $this->helperWrapper->{$name}();
+        
+        $this->helperWrapper->someOtherMagicMethodThatWillFail();
+    }
 }
