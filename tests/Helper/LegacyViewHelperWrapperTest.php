@@ -70,4 +70,9 @@ class LegacyViewHelperWrapperTest extends PHPUnit_Framework_TestCase
         
         $this->helperWrapper->someOtherMagicMethodThatWillFail();
     }
+
+    public function testDirect()
+    {
+        $this->assertNull($this->helperWrapper->direct());
+    }
 }
