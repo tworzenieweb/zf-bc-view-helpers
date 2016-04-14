@@ -1,4 +1,7 @@
-  {
+{
+  "name": "tworzenieweb/zf-bc-view-helpers",
+  "description": "A small tool library for making B/C of ZF2 helpers to ZF1",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Tworzenieweb\\": "src/"
