@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/tworzenieweb/zf-bc-view-helpers/badges/gpa.svg)](https://codeclimate.com/github/tworzenieweb/zf-bc-view-helpers) [![Test Coverage](https://codeclimate.com/github/tworzenieweb/zf-bc-view-helpers/badges/coverage.svg)](https://codeclimate.com/github/tworzenieweb/zf-bc-view-helpers/coverage) [![Build Status](https://travis-ci.org/tworzenieweb/zf-bc-view-helpers.svg?branch=master)](https://travis-ci.org/tworzenieweb/zf-bc-view-helpers)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tworzenieweb/zf-bc-view-helpers/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tworzenieweb/zf-bc-view-helpers/?branch=master)
 
 Zend Framework ViewHelpers BC Compatibility
 =======
